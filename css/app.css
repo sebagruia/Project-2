@@ -1,0 +1,240 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+/*    font-family: 'Open Sans', sans-serif;*/
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+    
+}
+
+.hidden-deck{
+    display:none;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    
+
+
+}
+
+.deck .card.open {
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+    overflow:visible;
+    animation: mymove1 0.3s 1;
+    -webkit-animation: mymove1 0.3s 1;
+}
+
+.wrong-guess{
+    -webkit-animation: mymove 1s 1;
+    animation: mymove 0.7s 1;
+}
+/*
+ * Styles for the Starting Page
+ */
+.start-game{
+    position: relative;
+    text-align: center;
+    margin-top:15%;
+}
+.start-game h2{
+    font-size:40px;
+}
+
+.start-button, .retry-button, .startAgain{
+    width:200px;
+    height:60px;
+    font-size: 23px;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    cursor:pointer;   
+    background-color:#53c8ef;
+    color: #fff;
+    
+}
+.start-hidden{
+    display:none;
+}
+
+
+/*
+ * Styles for the Congratulation page
+ */
+#congratulation{
+   position: relative;
+    text-align: center;
+    margin-top:10%; 
+}
+#congratulation h1{
+     font-size:40px; 
+}
+#congratulation h4{
+    font-size:25px;
+}
+.congratulation-hidden{
+    display:none;
+}
+#congratulation .check{
+    width:100px;
+    height:auto;
+}
+
+.startAgain{
+    margin-top:20px;
+}
+
+/*
+ * Styles for the Let's try Again Page
+ */
+#retry{
+   position: relative;
+    text-align: center;
+    margin-top:15%; 
+}
+#retry h2{
+     font-size:40px; 
+}
+
+.retry-close{
+    display:none;
+}
+.stars-guidance{
+    padding:0;
+}
+.stars-guidance li{
+    display:inline-block;
+    list-style:none;
+    
+    
+}
+
+
+/* * Styles for the Score Panel*/
+ 
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+.hidden-panel{
+    display:none;
+}
+ .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+ .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+.score-panel #basicUsage{
+    display:inline-block;
+    margin-left: 10px;
+}
+.hidden-h1{
+    display:none;
+}
+
+<!--******************KEYFRAMES******************-->
+@-webkit-keyframes mymove {
+     0%{transform:rotate(0deg); background: #f24d04;}
+    25%{transform:rotate(-25deg);background: #f24d04;}
+    50%{transform:rotate(-10deg);background: #f24d04;}
+    100%{transform:rotate(10deg);background: #f24d04;}
+}
+
+@keyframes mymove {
+    0%{transform:rotate(0deg); background: #f24d04;}
+    25%{transform:rotate(-25deg);background: #f24d04;}
+    50%{transform:rotate(-10deg);background: #f24d04;}
+    100%{transform:rotate(10deg);background: #f24d04;}
+}
+
+@keyframes mymove1{
+    from{transform:rotate(0deg);}
+    
+    to{transform:rotate(270deg);}
+    
+    
+  }
+@-webkit-keyframes mymove1{
+    from{transform:rotate(0deg);}
+    
+    to{transform:rotate(270deg);}
+    
+  }

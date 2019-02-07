@@ -1,0 +1,17 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "Timer lib",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "easytimer.js": "^3.0.1"
+  }
+}
