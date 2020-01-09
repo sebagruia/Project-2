@@ -4,6 +4,8 @@
 
 The game starts by pressing the **Let's play** button
 
+* [Link To GitHub Pages](https://sebagruia.github.io/Project-2/)
+
 ## Restart Game
 
 The game can be restarted at any moment during the game by pressing the **Restart icon** button
