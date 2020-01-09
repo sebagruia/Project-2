@@ -22,6 +22,7 @@ body {
 }
 
 .container {
+    margin-top:2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,6 +245,13 @@ h1 {
 
 
 @media screen and (max-width:768px) {
+    .container {
+        margin-top:20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
     .deck {
         width: 300px;
         height: 310px;
@@ -258,10 +266,6 @@ h1 {
         width: 235px;
         margin-bottom: 10px;
     }
-
-    /* .fa {
-        font-size: 0.6em;
-    } */
 
     .deck .fa{
         font-size: 0.6em;
