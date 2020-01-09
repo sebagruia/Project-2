@@ -210,11 +210,11 @@ function timeSetting() {
         timePanel.innerHTML = timerInstance.getTimeValues();
     }
     //*******************************************************************
-    // timerInstance.addEventListener('secondsUpdated', insertTimeCount);
-    // timerInstance.addEventListener('targetAchieved', function () {
-    //     timerInstance.removeEventListener('secondsUpdated', insertTimeCount);
-    //     letsTryAgain();
-    // });
+    timerInstance.addEventListener('secondsUpdated', insertTimeCount);
+    timerInstance.addEventListener('targetAchieved', function () {
+        timerInstance.removeEventListener('secondsUpdated', insertTimeCount);
+        letsTryAgain();
+    });
     //******Setting the Stars appearance according to the Time ****
     firstThird = setTimeout(function () {
         fullStarsList[0].innerHTML = emptyStar;
